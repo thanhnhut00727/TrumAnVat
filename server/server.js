@@ -29,7 +29,7 @@ app.use(cors());
 app.use("/api/auth", authUser);
 app.use("/api/product", product);
 app.use("/api/order", order);
-const port = process.env.PROT || 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
