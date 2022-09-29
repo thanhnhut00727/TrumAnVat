@@ -54,7 +54,7 @@ router.delete("/:id", verifyToken, async (req, res) => {
 // @route GET api/order/id
 // @desc Get order by id
 // @access Private
-router.get("/:id", verifyToken, async (req, res) => {
+router.get("/item/:id", verifyToken, async (req, res) => {
   try {
     const { id } = req.params;
     const order = await Order.findOne({ id });
