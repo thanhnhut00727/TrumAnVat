@@ -1,0 +1,191 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "userName":"admin2",
+    "password":"admin2"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "userName":"admin2",
+    "password":"admin2"
+}
+
+###
+
+POST http://localhost:5000/api/product/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY3MTU4Njc1Yjg4NWY2Y2E3MmJiMzIiLCJpYXQiOjE2NjAzNjAwNzB9.kHP9EnX7DPrZxz1J8A-kcVMST-F9MHyPrtJfbm_hkKg 
+
+{
+   "productName":"Khô heo cháy tỏi 10aa0g",
+    "price":60000,
+    "price1":60000,
+    "price2":59000,
+    "price3":58000,
+    "barcode":"841109200203",
+    "giahangxa":200000,
+    "photo":"hahahdajsdw",
+    "notes":"haha hihi hasdhas",
+    "donvitinh":"300g",
+    "productType":"THỰC PHẨM KHÔ",
+    "productCode":"123",
+    "productStatus":"Còn Hàng",
+    "unit":"300g"
+}
+###
+POST http://localhost:5000/api/product/addList
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZiMTk3ZTlmMWQ3OGU5MDYzNzg3MjkiLCJpYXQiOjE2NjA2MjMzMDF9.TpIAOL882nL6qHsdPuQ3AAWhwaY5Hv4aWWkLDaPI1a8
+
+[{
+   "productName":"Khô bò miếng l1 500",
+    "price":71000,
+    "price1":60000,
+    "price2":59000,
+    "price3":58000,
+    "barcode":"841109200206",
+    "giahangxa":200000,
+    "photo":"hahahdajsdw",
+    "notes":"haha hihi hasdhas",
+    "donvitinh":"300g",
+    "productType":"THỰC PHẨM KHÔ",
+    "productType":"THỰC PHẨM KHÔ",
+    "productCode":"123",
+    "productStatus":"Còn Hàng",
+    "unit":"300g"
+},
+{
+   "productName":"Khô bò miếng l1 800",
+    "price":71000,
+    "price1":60000,
+    "price2":59000,
+    "price3":58000,
+    "barcode":"841109200206",
+    "giahangxa":200000,
+    "photo":"hahahdajsdw",
+    "notes":"haha hihi hasdhas",
+    "donvitinh":"300g",
+    "productType":"THỰC PHẨM KHÔ",
+    "productType":"THỰC PHẨM KHÔ",
+    "productCode":"123",
+    "productStatus":"Còn Hàng",
+    "unit":"300g"
+}]
+####
+GET  http://localhost:5000/api/product/62f718fc715423a8771d5d56
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY3MTU4Njc1Yjg4NWY2Y2E3MmJiMzIiLCJpYXQiOjE2NjAzNjAwNzB9.kHP9EnX7DPrZxz1J8A-kcVMST-F9MHyPrtJfbm_hkKg 
+
+
+###
+
+###
+
+GET http://localhost:5000/api/product/all 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY3MTU4Njc1Yjg4NWY2Y2E3MmJiMzIiLCJpYXQiOjE2NjAzNjAwNzB9.kHP9EnX7DPrZxz1J8A-kcVMST-F9MHyPrtJfbm_hkKg
+
+
+
+####
+POST  http://localhost:5000/api/product/update
+Content-Type: application/json
+
+{
+    "_id": "62f5df738e842c4f9534adb6",
+      "productName": "Khô gà lá chanh 500g",
+      "productType": "",
+      "price1": 60000,
+      "price2": 59000,
+      "price3": 58000,
+      "unit": "",
+      "quantityOrder": 2,
+      "totalPriceOrder": 2,
+      "CreateAt": "2022-08-12T05:04:51.590Z"
+
+}
+####
+POST  http://localhost:5000/api/product/delete
+Content-Type: application/json
+
+{
+    "_id": "62f5df738e842c4f9534adb6",
+      "productName": "Khô gà lá chanh 500g",
+      "productType": "",
+      "price1": 60000,
+      "price2": 59000,
+      "price3": 58000,
+      "unit": "",
+      "quantityOrder": 2,
+      "totalPriceOrder": 2,
+      "CreateAt": "2022-08-12T05:04:51.590Z"
+
+}
+###
+
+POST http://localhost:5000/api/order/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZiMTk3ZTlmMWQ3OGU5MDYzNzg3MjkiLCJpYXQiOjE2NjA2MjMzMDF9.TpIAOL882nL6qHsdPuQ3AAWhwaY5Hv4aWWkLDaPI1a8
+
+{
+   "totalPrice":27000000,
+    "orderBy":"Nhut Tran",
+    "orderFor":"Dong Vy",
+    "products": [
+    {
+      "_id": "62fb1b3b7f49b5b79c6644a3",
+      "productName": "Khô heo cháy tỏi 10a0g",
+      "productType": "THỰC PHẨM KHÔ",
+      "productCode": "123",
+      "productStatus": "Còn Hàng",
+      "unit": "300g",
+      "price": 60000,
+      "price1": 60000,
+      "price2": 59000,
+      "price3": 58000,
+      "donvitinh": "300g",
+      "barcode": "841109200203",
+      "notes": "haha hihi hasdhas",
+      "photo": "hahahdajsdw",
+      "giahangxa": 200000,
+      "quantityOrder": 100,
+      "totalPriceOrder": 2000000
+    },{
+      "_id": "62fb1b617f49b5b79c6644a5",
+      "productName": "Khô bò miếng l1 500g",
+      "productType": "THỰC PHẨM KHÔ",
+      "productCode": "123",
+      "productStatus": "Còn Hàng",
+      "unit": "300g",
+      "price": 71000,
+      "price1": 60000,
+      "price2": 59000,
+      "price3": 58000,
+      "donvitinh": "300g",
+      "barcode": "841109200206",
+      "notes": "haha hihi hasdhas",
+      "photo": "hahahdajsdw",
+      "giahangxa": 200000,
+       "quantityOrder": 100,
+      "totalPriceOrder": 2000000
+    }
+  ]
+}
+
+###
+
+GET http://localhost:5000/api/product/62f72077f905e9662fc5ddd9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY3MTU4Njc1Yjg4NWY2Y2E3MmJiMzIiLCJpYXQiOjE2NjAzNjAwNzB9.kHP9EnX7DPrZxz1J8A-kcVMST-F9MHyPrtJfbm_hkKg
+####
+
+
+GET http://localhost:5000/api/order/630494ac8b06b6c8d875b9c7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY3MTU4Njc1Yjg4NWY2Y2E3MmJiMzIiLCJpYXQiOjE2NjAzNjAwNzB9.kHP9EnX7DPrZxz1J8A-kcVMST-F9MHyPrtJfbm_hkKg
+####
+
+GET http://localhost:5000/api/order/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY3MTU4Njc1Yjg4NWY2Y2E3MmJiMzIiLCJpYXQiOjE2NjAzNjAwNzB9.kHP9EnX7DPrZxz1J8A-kcVMST-F9MHyPrtJfbm_hkKg
+####
