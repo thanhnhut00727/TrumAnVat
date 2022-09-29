@@ -47,6 +47,11 @@ function Orders() {
       }
     } catch (error) {}
   };
+  function currencyFormat(num) {
+    return (
+      "VND" + " " + num?.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    );
+  }
   return (
     <>
       <div className="content">
@@ -67,7 +72,7 @@ function Orders() {
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{order?.orderFor} </td>
-                    <td>{order?.totalPrice}</td>
+                    <td>{currencyFormat(order?.totalPrice)}</td>
                     <td> {order?.orderBy}</td>
                     <td>{order?.CreateAt}</td>
                     <td>
